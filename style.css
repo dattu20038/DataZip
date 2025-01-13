@@ -1,0 +1,96 @@
+/* Reset basic styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Background styling */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background: linear-gradient(135deg, #262c2e, #021a33);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+/* Container styling */
+.container {
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Heading */
+h1 {
+    font-size: 1.8em;
+    color: #081a2b;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+/* Input styling */
+input[type="file"] {
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px dashed #463114;
+    border-radius: 8px;
+    outline: none;
+    color: #145DA0;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+input[type="file"]:hover {
+    background-color: #eef6fd;
+}
+
+/* Button styling */
+button {
+    display: inline-block;
+    margin: 12px 5px;
+    padding: 12px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #3e3017;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+button:hover {
+    background-color: #357ABD;
+}
+
+button:active {
+    background-color: #28548b;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    button {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
