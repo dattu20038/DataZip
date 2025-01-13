@@ -28,7 +28,7 @@ How to Use
 
 ### Clone the repository
 
-    git clone https://github.com/your-username/DataZip.git
+    git clone https://github.com/dattu20038/DataZip.git
 
 ### Navigate to the project directory
 
