@@ -10,6 +10,7 @@ body {
     font-family: 'Roboto', Arial, sans-serif;
     background: linear-gradient(135deg, #262c2e, #021a33);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -79,6 +80,25 @@ button:active {
     background-color: #28548b;
 }
 
+/* Footer Styling */
+footer {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    color: #ffffff;
+    background: #021a33;
+    padding: 12px 0;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+.author {
+    font-weight: bold;
+    color: #00bcd4;
+}
+
 /* Responsive Design */
 @media (max-width: 500px) {
     .container {
@@ -92,5 +112,10 @@ button:active {
     button {
         width: 100%;
         margin: 10px 0;
+    }
+
+    footer {
+        font-size: 14px;
+        padding: 10px 0;
     }
 }
