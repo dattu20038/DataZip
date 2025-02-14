@@ -119,3 +119,14 @@ footer {
         padding: 10px 0;
     }
 }
+.author {
+    text-decoration: none; 
+    color: inherit; 
+    font-weight: bold;
+    transition: color 0.3s ease; 
+}
+
+.author:hover {
+    color: #007bff; 
+}
+
