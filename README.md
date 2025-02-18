@@ -61,22 +61,6 @@ You can view a live demo of the DataZip application at the following link:
 - **Decompress Files**: Select compressed files (`.huff` extension) and click on the "Decompress Files" button to extract the original content.
 - **Clear Files**: Clear all files from the current session by clicking the "Clear All" button.
 
-## Contributing
 
-If you'd like to contribute to **DataZip**, feel free to fork the repository and submit a pull request. Here are some ways you can help:
-
-- Fix bugs
-- Add new features
-- Improve the user interface and experience
-
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
-## Author
-
-**DataZip** was created by [Datta Srivathsava Gollapinni](https://portfolio-main-sigma-two.vercel.app/).
-
----
 
 **Note**: Ensure to replace any placeholders (e.g., GitHub username, demo link) with your actual details before using this README.
