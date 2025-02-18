@@ -63,4 +63,3 @@ You can view a live demo of the DataZip application at the following link:
 
 
 
-**Note**: Ensure to replace any placeholders (e.g., GitHub username, demo link) with your actual details before using this README.
