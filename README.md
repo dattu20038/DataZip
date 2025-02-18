@@ -1,123 +1,82 @@
-DataZip
-=======
+# DataZip
 
-DataZip is a web-based file compression and decompression tool that uses the Huffman coding algorithm. The tool allows users to compress files into a `.huff` format and decompress them back to their original state.
+**DataZip** is a file compression and decompression tool that allows users to upload files, select compression levels, and perform compression or decompression operations using Huffman coding. It supports a drag-and-drop interface for file uploads and offers real-time progress tracking.
 
-Features
---------
+## Features
 
-*   **File Compression**: Upload a file and compress it using Huffman coding.
-    
-*   **File Decompression**: Decompress the `.huff` file back to its original format.
-    
-*   **Download Options**: Download both compressed and decompressed files.
-    
+- **Drag & Drop Upload**: Easily drag and drop files or click to select files for compression or decompression.
+- **Compression Levels**: Choose between `Fastest`, `Balanced`, or `Maximum` compression levels.
+- **Theme Toggle**: Switch between light and dark modes for a better user experience.
+- **Real-Time Progress**: Visual progress bars for both individual files and overall operations.
+- **Compression Statistics**: View detailed statistics, including total files, file size, and space saved.
+- **File Management**: Add, remove, and clear files before starting operations.
 
-Technologies Used
------------------
+## Technologies Used
 
-*   HTML
-    
-*   CSS
-    
-*   JavaScript
-    
+- **Frontend**:
+  - HTML5
+  - CSS3 (with custom variables for theming)
+  - JavaScript (for handling the logic)
+  - Font Awesome for icons
 
-How to Use
-----------
+- **Backend**:
+  - **Huffman Coding** for file compression
+  - **Priority Queue** for building Huffman Tree
+  - **Blob API** for generating downloadable files
 
-### Clone the repository
+## Installation
 
-    git clone https://github.com/dattu20038/DataZip.git
+To run **DataZip** locally:
 
-### Navigate to the project directory
+1. Clone this repository to your local machine:
+    ```bash
+    git clone https://github.com/yourusername/datazip.git
+    ```
+2. Navigate to the project directory:
+    ```bash
+    cd datazip
+    ```
+3. Open the `index.html` file in a web browser to start using the application.
 
-    cd DataZip
+### Dependencies
 
-### Open the application
+No external dependencies are required. All files are self-contained.
 
-Open the `index.html` file in your browser to launch the application.
+## How It Works
 
-Project Structure
------------------
+1. **File Upload**: Users can upload files either through the drag-and-drop area or by selecting files through the file input.
+2. **Compression Options**: Users can select their preferred compression level from three options: `Fastest`, `Balanced`, and `Maximum`. The `Fastest` option prioritizes speed over compression ratio, while the `Maximum` option provides the highest compression at the cost of longer processing time.
+3. **Processing Files**: Files are processed in chunks, and their compression or decompression progress is displayed in real-time. Once complete, users can download the resulting files.
+4. **Error Handling**: Errors such as exceeding file size limits are displayed to the user in a clear, informative manner.
 
-    DataZip/
-    ├── index.html         # Main HTML file
-    ├── style.css          # CSS file for styling
-    ├── script.js          # JavaScript file for functionality
-    └── README.md          # Project documentation
+## Demo
 
-Detailed Explanation
---------------------
+You can view a live demo of the DataZip application at the following link:
 
-### HuffmanNode Class
+[DataZip Demo](https://data-zip-dat.vercel.app/)
 
-The `HuffmanNode` class represents a node in the Huffman tree. Each node contains:
+## Usage
 
-*   **byte**: The data (character or byte).
-    
-*   **freq**: The frequency of the data.
-    
-*   **left** and **right**: Pointers to child nodes.
-    
+- **Compress Files**: Select files, choose a compression level, and click on the "Compress Files" button. The system will compress the files and provide a downloadable link.
+- **Decompress Files**: Select compressed files (`.huff` extension) and click on the "Decompress Files" button to extract the original content.
+- **Clear Files**: Clear all files from the current session by clicking the "Clear All" button.
 
-### PriorityQueue Class
+## Contributing
 
-The `PriorityQueue` class is implemented using a min-heap to manage the nodes based on their frequency.
+If you'd like to contribute to **DataZip**, feel free to fork the repository and submit a pull request. Here are some ways you can help:
 
-### Core Functions
+- Fix bugs
+- Add new features
+- Improve the user interface and experience
 
-#### `calculateFrequency(data)`
+## License
 
-Calculates the frequency of each byte in the input data.
+Distributed under the MIT License. See `LICENSE` for more information.
 
-#### `buildHuffmanTree(frequency)`
+## Author
 
-Builds the Huffman tree using the calculated frequency map.
+**DataZip** was created by [Datta Srivathsava Gollapinni](https://portfolio-main-sigma-two.vercel.app/).
 
-#### `generateCodes(node, currentCode)`
+---
 
-Generates Huffman codes for each byte by traversing the Huffman tree.
-
-#### `compress(data)`
-
-Compresses the input data using the generated Huffman codes and returns a compressed buffer.
-
-#### `decompress(buffer)`
-
-Decompresses the compressed buffer using the Huffman tree and returns the original data.
-
-UI Elements
------------
-
-*   **File Input**: Allows users to upload a file.
-    
-*   **Compress Button**: Compresses the uploaded file.
-    
-*   **Download Compressed File Button**: Downloads the compressed file.
-    
-*   **Decompress Button**: Decompresses the compressed file.
-    
-*   **Download Decompressed File Button**: Downloads the decompressed file.
-    
-
-Styling
--------
-
-The UI is styled with a modern and responsive design:
-
-*   **Linear gradient background**.
-    
-*   **Styled buttons** with hover and active effects.
-    
-*   **Responsive design** for different screen sizes.
-    
-
-Future Improvements
--------------------
-
-*   Support for multiple file formats.
-    
-*   Display compression ratio and statistics.
-    
-*   Drag-and-drop file upload feature.
+**Note**: Ensure to replace any placeholders (e.g., GitHub username, demo link) with your actual details before using this README.
