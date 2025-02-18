@@ -4,23 +4,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DataZip</title>
-    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>DataZip</h1>
-        <input type="file" id="fileInput">
-        <button id="compressBtn">Compress File</button>
-        <button id="downloadCompressedBtn">Download Compressed File</button>
-        <button id="decompressBtn">Decompress File</button>
-        <button id="downloadDecompressedBtn">Download Decompressed File</button>
-    </div>
+        <div class="header">
+            <h1>DataZip</h1>
+            <button class="theme-toggle" id="themeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
 
+        <div class="compression-options">
+            <h3>Compression Level</h3>
+            <div class="radio-group">
+                <label>
+                    <input type="radio" name="compression" value="fast" checked>
+                    Fastest (Lower Compression)
+                </label>
+                <label>
+                    <input type="radio" name="compression" value="balanced">
+                    Balanced (Medium Compression)
+                </label>
+                <label>
+                    <input type="radio" name="compression" value="max">
+                    Maximum (Best Compression)
+                </label>
+            </div>
+        </div>
+
+        <div class="drop-zone" id="dropZone">
+            <i class="fas fa-cloud-upload-alt fa-3x"></i>
+            <p>Drag & drop files here or click to select</p>
+            <input type="file" id="fileInput" multiple>
+            <div class="file-types">
+                <p>Supported file types: All files</p>
+                <p>Maximum size: 100MB per file</p>
+            </div>
+        </div>
+
+        <div class="file-list" id="fileList"></div>
+
+        <div class="global-progress" style="display: none;">
+            <h3>Overall Progress</h3>
+            <div class="progress-bar">
+                <div class="progress-bar-fill"></div>
+                <div class="progress-text">0%</div>
+            </div>
+        </div>
+
+        <div class="actions">
+            <button id="compressBtn" class="action-btn">
+                <i class="fas fa-compress"></i> Compress Files
+            </button>
+            <button id="decompressBtn" class="action-btn">
+                <i class="fas fa-expand"></i> Decompress Files
+            </button>
+            <button id="clearBtn" class="action-btn secondary">
+                <i class="fas fa-trash"></i> Clear All
+            </button>
+        </div>
+
+        <div class="stats-panel" id="statsPanel">
+            <h3>Compression Statistics</h3>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-label">Total Files</div>
+                    <div class="stat-value" id="totalFiles">0</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">Total Size</div>
+                    <div class="stat-value" id="totalSize">0 B</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">Compressed Size</div>
+                    <div class="stat-value" id="compressedSize">0 B</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">Space Saved</div>
+                    <div class="stat-value" id="spaceSaved">0 B</div>
+                </div>
+            </div>
+        </div>
+    </div>
     <footer>
         Designed By 
         <a href="https://portfolio-main-sigma-two.vercel.app/" class="author" target="_blank">Datta Srivathsava Gollapinni</a>
     </footer>
 
-    <script src="./script.js"></script>
+    
+    <script src="script.js"></script>
 </body>
 </html>
