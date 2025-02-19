@@ -78,6 +78,30 @@ button:hover {
 button:active {
     background-color: #28548b;
 }
+/* Footer Styling */
+footer {
+    margin-top: 20px;
+    padding: 15px;
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+    background: linear-gradient(135deg, #021a33, #262c2e);
+    color: #fff;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.2);
+}
+
+footer a {
+    color: #FFD700;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ff5733;
+    text-shadow: 0 0 5px rgba(255, 87, 51, 0.7);
+}
 
 /* Responsive Design */
 @media (max-width: 500px) {
